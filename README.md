@@ -1,5 +1,5 @@
 # AutoDRIVE-RoboRacer Sim-Racing Participation
-Registration and Participant Analysis for RoboRacer Sim Racing Leagues
+Registration Data and Participant Analysis for RoboRacer Sim Racing Leagues
 
 | Venue | Global Participation Map | Participating Organizations |
 |:-----:|:------------------------:|:---------------------------:|
