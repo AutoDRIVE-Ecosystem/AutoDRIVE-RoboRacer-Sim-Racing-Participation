@@ -201,7 +201,7 @@ def update_map(selected_comp, selected_metric):
             "x": 0.5,
             "xanchor": "center"
         },
-        geo=dict(showland=True, landcolor='lightgray', showocean=True, oceancolor='aliceblue'),
+        geo=dict(showland=True, landcolor='lightgray', showocean=True, oceancolor='aliceblue', resolution=50),
         margin=dict(l=100, r=50, t=140, b=50),
         coloraxis_colorbar=dict(
             title=dict(
