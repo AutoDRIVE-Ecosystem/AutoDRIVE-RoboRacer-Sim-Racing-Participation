@@ -225,4 +225,4 @@ def update_map(selected_comp, selected_metric):
 # Run app
 # -------------------------
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run_server(debug=False, host='0.0.0.0', port=port, threaded=True)
