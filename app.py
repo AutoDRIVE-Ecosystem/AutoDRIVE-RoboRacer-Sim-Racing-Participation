@@ -1,6 +1,9 @@
 import pandas as pd
 from dash import Dash, dcc, html, Output, Input
 import plotly.express as px
+import os
+
+port = int(os.environ.get("PORT", 8050))  # default 8050 if running locally
 
 # -------------------------
 # Competition order
