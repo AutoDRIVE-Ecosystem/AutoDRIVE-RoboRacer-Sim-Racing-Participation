@@ -8,7 +8,7 @@ port = int(os.environ.get("PORT", 8050))  # default 8050 if running locally
 # -------------------------
 # Competition order
 # -------------------------
-competition_order = ["IROS 2024", "CDC 2024", "ICRA 2025", "CDC-TF 2025"]
+competition_order = ["IROS 2024", "CDC 2024", "ICRA 2025", "CDC-TF 2025", "ICRA 2026"]
 
 # -------------------------
 # Load and clean data
