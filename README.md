@@ -1,6 +1,10 @@
 # AutoDRIVE-RoboRacer Sim-Racing Participation
 Registration Data and Participant Analysis for RoboRacer Sim Racing Leagues
 
+| ![](COMBINED/Participants.png)   | ![](COMBINED/Teams.png)   | ![](COMBINED/Organizations.png)   | ![](COMBINED/Competitions.png)   |
+|:--------------------------------:|:-------------------------:|:---------------------------------:|:--------------------------------:|
+| **Total Number of Participants** | **Total Number of Teams** | **Total Number of Organizations** | **Total Number of Competitions** |
+
 | Venue | Global Participation Map | Participating Organizations |
 |:-----:|:------------------------:|:---------------------------:|
 | [ICRA 2026](https://autodrive-ecosystem.github.io/competitions/roboracer-sim-racing-icra-2026) | <img src="ICRA%202026/Map.png" height="300"> | <img src="ICRA%202026/Collage.png" height="300"> |
