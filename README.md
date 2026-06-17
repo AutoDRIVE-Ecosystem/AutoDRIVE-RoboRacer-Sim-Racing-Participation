@@ -3,11 +3,11 @@ Registration Data and Participant Analysis for RoboRacer Sim Racing Leagues
 
 ## Cumulative Data Visualization
 
-| ![](COMBINED/Participants.png) | ![](COMBINED/Teams.png) |
-|:------------------------------:|:-----------------------:|
 | **Total Participants**         | **Total Teams**         |
-| ![](COMBINED/Organizations.png) | ![](COMBINED/Competitions.png) |
+|:------------------------------:|:-----------------------:|
+| ![](COMBINED/Participants.png) | ![](COMBINED/Teams.png) |
 | **Total Organizations**         | **Total Competitions**         |
+| ![](COMBINED/Organizations.png) | ![](COMBINED/Competitions.png) |
 
 ## Independent Data Visualization
 
