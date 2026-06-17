@@ -1,9 +1,15 @@
 # AutoDRIVE-RoboRacer Sim-Racing Participation
 Registration Data and Participant Analysis for RoboRacer Sim Racing Leagues
 
-| ![](COMBINED/Participants.png) | ![](COMBINED/Teams.png) | ![](COMBINED/Organizations.png) | ![](COMBINED/Competitions.png) |
-|:------------------------------:|:-----------------------:|:-------------------------------:|:------------------------------:|
-| **Total Participants**         | **Total Teams**         | **Total Organizations**         | **Total Competitions**         |
+## Cumulative Data Visualization
+
+| ![](COMBINED/Participants.png) | ![](COMBINED/Teams.png) |
+|:------------------------------:|:-----------------------:|
+| **Total Participants**         | **Total Teams**         |
+| ![](COMBINED/Organizations.png) | ![](COMBINED/Competitions.png) |
+| **Total Organizations**         | **Total Competitions**         |
+
+## Independent Data Visualization
 
 | Venue | Global Participation Map | Participating Organizations |
 |:-----:|:------------------------:|:---------------------------:|
