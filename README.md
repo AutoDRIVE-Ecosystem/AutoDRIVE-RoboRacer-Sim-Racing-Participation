@@ -1,16 +1,6 @@
 # AutoDRIVE-RoboRacer Sim-Racing Participation
 Registration Data and Participant Analysis for RoboRacer Sim Racing Leagues
 
-## Cumulative Data Visualization
-
-| **Total Participants**         | **Total Teams**         |
-|:------------------------------:|:-----------------------:|
-| ![](COMBINED/Participants.png) | ![](COMBINED/Teams.png) |
-| **Total Organizations**         | **Total Competitions**         |
-| ![](COMBINED/Organizations.png) | ![](COMBINED/Competitions.png) |
-
-## Independent Data Visualization
-
 | Venue | Global Participation Map | Participating Organizations |
 |:-----:|:------------------------:|:---------------------------:|
 | [IROS 2026](https://autodrive-ecosystem.github.io/competitions/roboracer-sim-racing-iros-2026) | <img src="IROS%202026/Map.png" height="300"> | <img src="IROS%202026/Collage.png" height="300"> |
