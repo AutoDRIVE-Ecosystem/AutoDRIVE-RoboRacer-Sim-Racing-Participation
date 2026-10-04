@@ -56,6 +56,21 @@ def load_competition(sheet_name):
         "COUNTRY",
     ]
 
+    text_cols = [
+        "TEAM NAME",
+        "TEAM MEMBER",
+        "ORGANIZATION",
+        "COUNTRY",
+    ]
+
+    for col in text_cols:
+        df[col] = df[col].map(
+            lambda value: value.strip()
+            if isinstance(value, str)
+            else value
+        )
+        df[col] = df[col].replace("", pd.NA)
+
     fill_cols = [
         "SR NO",
         "TEAM NAME",
@@ -107,9 +122,9 @@ df_split = all_data.copy()
 
 df_split["COUNTRY"] = (
     df_split["COUNTRY"]
-    .astype(str)
+    .astype("string")
     .str.replace(
-        r"\s*&\s*|\s*/\s*|\s+and\s+",
+        r"\s*[&/]\s*",
         ",",
         regex=True,
     )
@@ -133,6 +148,11 @@ df_split["COUNTRY"] = (
     df_split["COUNTRY"]
     .replace(country_alias_map)
 )
+
+df_split = df_split[
+    df_split["COUNTRY"].notna()
+    & df_split["COUNTRY"].ne("")
+].copy()
 
 # ============================================================
 # AGGREGATE DATA
@@ -167,10 +187,6 @@ all_combined = (
     df_split
     .groupby("COUNTRY")
     .agg(
-        Teams=(
-            "TEAM NAME",
-            "nunique",
-        ),
         Participants=(
             "TEAM MEMBER",
             "count",
@@ -185,6 +201,23 @@ all_combined = (
         ),
     )
     .reset_index()
+)
+
+all_team_counts = (
+    df_split
+    .drop_duplicates(
+        ["COUNTRY", "Competition", "TEAM NAME"]
+    )
+    .groupby("COUNTRY")
+    .size()
+    .rename("Teams")
+    .reset_index()
+)
+
+all_combined = all_combined.merge(
+    all_team_counts,
+    on="COUNTRY",
+    how="left",
 )
 
 all_combined["Competition"] = (
@@ -3231,6 +3264,13 @@ def update_map(
             "All Competitions"
         )
 
+    if selected_comp not in (
+        ["All Competitions"]
+        + competition_order
+    ):
+
+        selected_comp = "All Competitions"
+
     if not selected_metric:
 
         selected_metric = "Teams"
@@ -3303,22 +3343,31 @@ def update_map(
     # TOTALS
     # ========================================================
 
+    source_subset = all_data
+
+    if selected_comp != "All Competitions":
+
+        source_subset = all_data[
+            all_data["Competition"]
+            == selected_comp
+        ]
+
     total_participants = int(
-        df_subset[
-            "Participants"
-        ].sum()
+        source_subset[
+            "TEAM MEMBER"
+        ].count()
     )
 
     total_teams = int(
-        df_subset[
-            "Teams"
-        ].sum()
+        source_subset.drop_duplicates(
+            ["Competition", "TEAM NAME"]
+        ).shape[0]
     )
 
     total_organizations = int(
-        df_subset[
-            "Organizations"
-        ].sum()
+        source_subset[
+            "ORGANIZATION"
+        ].nunique()
     )
 
     total_countries = int(
